@@ -77,9 +77,46 @@
       Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со
       вкусом.
     </p>
-
-    <!-- <div class="header-thumb">
-      <img src="./images/header/SliderMob1.jpg" alt="" />
-    </div> -->
+    <!-- Иммитаия слайдера -->
+    <div class="header-thumb">
+      <picture>
+        <source
+          srcset="
+            ./images/header/SliderMob1.jpg    1x,
+            ./images/header/SliderMob1@2x.jpg 2x,
+            ./images/header/SliderMob1@3x.jpg 3x
+          "
+          media="(max-width:768px)"
+        />
+        <source
+          srcset="
+            ./images/header/SliderTab1.jpg    1x,
+            ./images/header/SliderTab1@2x.jpg 2x,
+            ./images/header/SliderTab1@3x.jpg 3x
+          "
+          media="(max-width:1200px)"
+        />
+        <img
+          srcset="
+            ./images/header/Slider1.jpg    1x,
+            ./images/header/Slider1@2x.jpg 2x,
+            ./images/header/Slider1@3x.jpg 3x
+          "
+          class="img--team"
+          src="./images/header/Slider1.jpg"
+          alt="Слайд 1"
+        />
+      </picture>
+    </div>
   </div>
+
+  <div class="siema">
+    <div><img src="./images/header/Slider1.jpg" alt="Слайд 1" /></div>
+    <div><img src="./images/header/Slider2.jpg" alt="Слайд 2" /></div>
+    <div><img src="./images/header/Slider3.jpg" alt="Слайд 3" /></div>
+  </div>
+  <script src="./js/siema.min.js"></script>
+  <script>
+    new Siema();
+  </script>
 </header>
