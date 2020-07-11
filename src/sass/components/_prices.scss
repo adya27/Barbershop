@@ -58,17 +58,15 @@
 }
 
 .prices-title {
-  position: relative;
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
-  padding-left: 80px;
 
   &::before {
     content: '';
+    margin-right: 20px;
 
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 60px;
+    min-width: 60px;
     height: 1px;
 
     background-color: $transparent-color;
