@@ -176,13 +176,13 @@ link {
   }
 }
 .header {
-  width: 100%;
-  overflow: hidden;
-  background-color: rgba(25, 28, 38, 0.2);
   position: relative;
+  margin-left: auto;
+  width: 100%;
+  background-color: #ffffff;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-left: auto;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 767px) {
@@ -231,12 +231,17 @@ link {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: teal;
+  background-color: #ffffff;
+  z-index: 12;
   width: 337px;
   height: 100%;
   padding-top: 118px;
   padding-left: 40px;
   overflow-y: scroll;
+}
+
+.header-menu.is-open .btn-register {
+  color: #303030;
 }
 
 .container-mobile {
@@ -310,37 +315,55 @@ link {
     height: 100%;
     width: 100%;
     top: 0;
+    left: calc((100% - 768px) / 2 + 120px + 39px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header-thumb {
     left: calc((100% - 1170px) / 2 + 120px + 40px);
   }
 }
 
 img {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
 
 .header-svg {
   fill: #ffffff;
 }
-
-.burger__svg {
-  fill: #ffffff;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 0;
-  margin: 0;
+@media screen and (min-width: 768px) {
+  .header-svg {
+    fill: #303030;
+  }
 }
 
-.burger__button:hover .burger__svg,
-.burger__button:focus .burger__svg {
+.logo:hover .header-svg,
+.logo:focus .header-svg {
+  fill: #ff6c00;
+  cursor: pointer;
+}
+
+.burger__svg {
+  padding: 0;
+  margin: 0;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-open {
+  fill: #ffffff;
+}
+
+.icon-close {
   fill: #303030;
 }
 
 .burger__button {
   display: inline-flex;
-  height: 40px;
   padding: 0;
   margin: 0;
   border: none;
+  height: 40px;
   background-color: transparent;
 }
 
@@ -350,7 +373,7 @@ img {
 
 .burger__button.is-open {
   position: relative;
-  z-index: 11;
+  z-index: 13;
   overflow-y: scroll;
 }
 
@@ -369,9 +392,9 @@ img {
 }
 
 .navigation-list {
-  list-style: none;
   padding-left: 0;
   margin: 0;
+  list-style: none;
 }
 
 .navigation-item {
@@ -392,6 +415,7 @@ img {
 .navigation-item:hover,
 .navigation-item:focus {
   color: #ff6c00;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -415,9 +439,9 @@ img {
 }
 
 .contacts__list {
-  list-style: none;
   padding-left: 0;
   margin: 0;
+  list-style: none;
 }
 @media screen and (max-width: 767px) {
   .contacts__list {
@@ -446,8 +470,8 @@ img {
   text-align: center;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #ffffff;
   text-decoration: none;
+  color: #ffffff;
 }
 @media screen and (max-width: 767px) {
   .contacts__item,
@@ -455,7 +479,6 @@ img {
     font-size: 18px;
     line-height: 25px;
     text-align: left;
-    /* identical to box height */
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #303030;
@@ -480,25 +503,38 @@ img {
   }
 }
 
+.contacts__item a:hover,
+.contacts__item a:focus {
+  color: #ff6c00;
+  cursor: pointer;
+}
+
 .how-we-work::before {
   display: block;
   content: " ";
   width: 60px;
   height: 1px;
-  background-color: #fff;
+  background-color: #303030;
 }
 @media screen and (min-width: 768px) {
   .how-we-work::before {
     margin-right: 40px;
   }
 }
+@media screen and (max-width: 767px) {
+  .how-we-work::before {
+    position: absolute;
+    top: 94px;
+    left: 0;
+  }
+}
 
 .how-we-work-list {
-  list-style: none;
   padding-left: 0;
   margin: 0;
   margin-left: auto;
   margin-right: auto;
+  list-style: none;
 }
 
 .how-we-work {
@@ -531,11 +567,16 @@ img {
   font-weight: 600;
   font-size: 14px;
   line-height: 19px;
-  /* identical to box height */
   letter-spacing: 0.2em;
   color: #303030;
 }
 
+.how-we-work {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
 @media screen and (min-width: 768px) {
   .how-we-work {
     display: none;
@@ -552,6 +593,12 @@ img {
   }
 }
 
+.how-we-work-ref:hover,
+.how-we-work-ref:focus {
+  color: #ff6c00;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 768px) {
   .how-we-work-tablet .how-we-work-list {
     display: flex;
@@ -562,7 +609,7 @@ img {
   position: relative;
   z-index: 10;
   display: none;
-  background-color: teal;
+  background-color: #ffffff;
 }
 @media screen and (min-width: 768px) {
   .container-tablet {
@@ -575,17 +622,6 @@ img {
     padding-top: 30px;
     padding-bottom: 40px;
   }
-}
-
-.img--team {
-  margin: 0;
-  padding: 0;
-}
-
-.slide,
-.siema {
-  margin: 0;
-  padding: 0;
 }
 
 @media screen and (min-width: 768px) {
