@@ -1,7 +1,8 @@
 .prices-box {
   margin-right: auto;
   margin-left: auto;
-  max-width: 1280px;
+  // max-width: 1280px;
+  width: 100%;
   height: 826px;
   background-color: $bg-color-for-few-section;
   background-image: url(../images/prices/prices-mobile1.png);
@@ -87,6 +88,8 @@
 .prices-list {
   margin-bottom: 50px;
   padding: 30px;
+
+  overflow: hidden;
 
   font-family: Open Sans;
   font-style: normal;
