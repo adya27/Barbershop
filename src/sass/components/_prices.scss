@@ -101,6 +101,13 @@
 
   color: $price-text-color;
 
+  @media screen and (max-width: 399px) {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    font-size: 11px;
+  }
+
   @media screen and (max-width: 1199px) {
     background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
   }
@@ -141,7 +148,7 @@
 .prices-item {
   display: flex;
   justify-content: space-between;
-  white-space: nowrap;
+  // white-space: nowrap;
   align-items: baseline;
   margin-bottom: 20px;
 
@@ -153,6 +160,7 @@
 }
 
 .prices-border {
+  flex: 1;
   border-bottom: 1px solid $transparent-color;
   width: 100%;
 }
