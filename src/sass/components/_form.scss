@@ -83,7 +83,7 @@
 
 .message {
   display: block;
-  margin-bottom: 60px;
+  // margin-bottom: 60px;
   border-bottom: 1px solid rgba(157, 164, 189, 0.4);
   @media screen and (min-width: $tablet) {
     width: 100%;
@@ -106,7 +106,7 @@
 
 .message-field {
   width: 100%;
-  padding-top: 60px;
+  padding-top: 35px;
   border: none;
   background-color: transparent;
   color: $primary-bg-color;
