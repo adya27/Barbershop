@@ -29,12 +29,11 @@
 // секция имя и телефон
 
 .form-section {
+  margin-bottom: 44px;
   @media screen and (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
     padding-right: 0;
-
-    margin-bottom: 44px;
   }
 }
 
