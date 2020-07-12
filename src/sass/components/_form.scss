@@ -82,7 +82,7 @@
 
 .message {
   display: block;
-  // margin-bottom: 60px;
+
   border-bottom: 1px solid rgba(157, 164, 189, 0.4);
   @media screen and (min-width: $tablet) {
     width: 100%;
@@ -105,7 +105,7 @@
 
 .message-field {
   width: 100%;
-  padding-top: 35px;
+  padding-top: 60px;
   border: none;
   background-color: transparent;
   color: $primary-bg-color;
@@ -113,6 +113,10 @@
   &:hover,
   &:focus {
     outline: none;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 35px;
   }
 }
 // расположение кнопки "отправить"
