@@ -30,8 +30,10 @@ body {
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1200px;
-    padding-left: 55px;
-    padding-right: 55px;
+    padding-left: 15px;
+    /* было 55px почему-то*/
+    padding-right: 15px;
+    /* было 55px почему-то*/
   }
 }
 
@@ -316,12 +318,12 @@ link {
     height: 100%;
     width: 100%;
     top: 0;
-    left: calc((100% - 768px) / 2 + 120px + 39px);
+    left: calc((100% - 768px) / 2 + 160px);
   }
 }
 @media screen and (min-width: 1200px) {
   .header-thumb {
-    left: calc((100% - 1170px) / 2 + 120px + 40px);
+    left: calc((100% - 1170px) / 2 + 120px);
   }
 }
 
@@ -628,10 +630,8 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .about-us > .container {
+  .general-content {
     display: flex;
-    justify-content: space-between;
-    align-content: center;
   }
 }
 
@@ -642,6 +642,7 @@ img {
 @media screen and (min-width: 768px) {
   .about-us .images-list {
     display: block;
+    flex-basis: calc((100%-30px) / 2);
   }
 }
 @media screen and (max-width: 1199px) {
@@ -654,16 +655,23 @@ img {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-right: 64px;
     min-width: 570px;
+    margin-right: 64px;
   }
   .about-us .images-list-item:not(:last-child) {
     margin-right: 30px;
   }
 }
 
-.about-us-content {
-  min-width: 500px;
+@media screen and (min-width: 768px) {
+  .about-us-content {
+    flex-basis: calc((100%-30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about-us-content {
+    min-width: 500px;
+  }
 }
 
 .about-us-title {
@@ -1447,12 +1455,14 @@ img {
   color: #ffffff;
 }
 
+.form-section {
+  margin-bottom: 44px;
+}
 @media screen and (min-width: 768px) {
   .form-section {
     display: flex;
     flex-wrap: wrap;
     padding-right: 0;
-    margin-bottom: 44px;
   }
 }
 
@@ -1516,13 +1526,18 @@ img {
 
 .message-field {
   width: 100%;
-  padding-top: 35px;
+  padding-top: 60px;
   border: none;
   background-color: transparent;
   color: #ffffff;
 }
 .message-field:hover, .message-field:focus {
   outline: none;
+}
+@media screen and (min-width: 1200px) {
+  .message-field {
+    padding-top: 35px;
+  }
 }
 
 @media screen and (max-width: 767px) {
