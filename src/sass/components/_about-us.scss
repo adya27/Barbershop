@@ -1,8 +1,6 @@
-.about-us > .container {
+.general-content {
   @media screen and (min-width: $tablet) {
     display: flex;
-    justify-content: space-between;
-    align-content: center;
   }
 }
 
@@ -12,6 +10,7 @@
   margin-right: 30px;
   @media screen and (min-width: $tablet) {
     display: block;
+    flex-basis: calc((100%-30px) / 2);
   }
   @media screen and (max-width: 1199px) {
     &-item:not(:last-child) {
@@ -23,15 +22,21 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-right: 64px;
     min-width: 570px;
+    margin-right: 64px;
+
     &-item:not(:last-child) {
       margin-right: 30px;
     }
   }
 }
 .about-us-content {
-  min-width: 500px;
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc((100%-30px) / 2);
+  }
+  @media screen and (min-width: $desktop) {
+    min-width: 500px;
+  }
 }
 
 .about-us-title {

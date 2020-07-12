@@ -20,8 +20,8 @@ body {
   }
   @media screen and (min-width: $desktop) {
     max-width: 1200px;
-    padding-left: 55px;
-    padding-right: 55px;
+    padding-left: 15px; /* было 55px почему-то*/
+    padding-right: 15px; /* было 55px почему-то*/
   }
 }
 
