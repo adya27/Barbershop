@@ -13,7 +13,6 @@ body {
   padding-right: 31px;
   margin-left: auto;
   margin-right: auto;
-  outline: 2px solid skyblue;
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -327,11 +326,6 @@ link {
   }
 }
 
-img {
-  display: block;
-  max-width: 100%;
-}
-
 .header-svg {
   fill: #ffffff;
 }
@@ -411,7 +405,8 @@ img {
 }
 @media screen and (max-width: 767px) {
   .navigation-item a {
-    font-size: 16px;
+    font-size: 18px;
+    line-height: 25px;
     color: #303030;
   }
 }
@@ -465,8 +460,7 @@ img {
   }
 }
 
-.contacts__item,
-.contacts__item a {
+.contacts__ref {
   font-family: "Open Sans";
   font-weight: 600;
   font-size: 12px;
@@ -478,15 +472,18 @@ img {
   color: #ffffff;
 }
 @media screen and (max-width: 767px) {
-  .contacts__item,
-.contacts__item a {
+  .contacts__ref {
     font-size: 18px;
     line-height: 25px;
     text-align: left;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
     color: #303030;
   }
+}
+
+.btn-register.mobile {
+  text-align: center;
+  text-decoration: none;
+  width: 194px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
