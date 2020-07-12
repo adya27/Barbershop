@@ -111,8 +111,15 @@
 .header-text {
   position: relative;
   z-index: 10;
+
+  max-width: 306px;
+
   @media screen and (min-width: $tablet) {
     margin-left: 60px;
+    max-width: 355px;
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: 400px;
   }
 }
 
@@ -289,7 +296,9 @@
 .btn-register.mobile {
   text-align: center;
   text-decoration: none;
-  width: 194px;
+  @media screen and (max-width: $tablet - 1px) {
+    width: 194px;
+  }
 }
 .contacts__item:last-child {
   @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
