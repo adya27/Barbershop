@@ -212,12 +212,13 @@ img {
 
   list-style: none;
 }
-.navigation-item {
+.navigation-item a {
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.1em;
+  text-decoration: none;
 
   color: $primary-bg-color;
 
@@ -228,8 +229,8 @@ img {
   }
 }
 
-.navigation-item:hover,
-.navigation-item:focus {
+.navigation-item:hover a,
+.navigation-item:focus a {
   color: $accent-bg-color;
   cursor: pointer;
 }
@@ -290,6 +291,10 @@ img {
     color: $primary-text-color;
   }
 }
+
+// .contacts__item .btn-register{
+
+// }
 .contacts__item:last-child {
   @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
     margin-bottom: 20px;
@@ -306,8 +311,8 @@ img {
   }
 }
 
-.contacts__item a:hover,
-.contacts__item a:focus {
+.contacts__ref:hover,
+.contacts__ref:focus {
   color: $accent-bg-color;
 
   cursor: pointer;
@@ -326,7 +331,7 @@ img {
   }
   @media screen and(max-width: $tablet - 1px) {
     position: absolute;
-    top: 94px;
+    top: 10px;
     left: 0;
   }
 }
@@ -353,7 +358,7 @@ img {
     margin-right: 40px;
   }
 }
-.how-we-work-item:last-child {
+.how-we-work-item:first-child {
   @media screen and(max-width: $tablet - 1px) {
     margin-bottom: 24px;
   }
@@ -374,6 +379,8 @@ img {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+
+  padding: 0;
 
   @media screen and (min-width: $tablet) {
     display: none;

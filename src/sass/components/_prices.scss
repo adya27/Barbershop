@@ -1,7 +1,8 @@
 .prices-box {
   margin-right: auto;
   margin-left: auto;
-  max-width: 1280px;
+  // max-width: 1280px;
+  width: 100%;
   height: 826px;
   background-color: $bg-color-for-few-section;
   background-image: url(../images/prices/prices-mobile1.png);
@@ -57,17 +58,15 @@
 }
 
 .prices-title {
-  position: relative;
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
-  padding-left: 80px;
 
   &::before {
     content: '';
+    margin-right: 20px;
 
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 60px;
+    min-width: 60px;
     height: 1px;
 
     background-color: $transparent-color;
@@ -88,6 +87,8 @@
   margin-bottom: 50px;
   padding: 30px;
 
+  overflow: hidden;
+
   font-family: Open Sans;
   font-style: normal;
   font-weight: 400;
@@ -97,6 +98,13 @@
   letter-spacing: 0.02em;
 
   color: $price-text-color;
+
+  @media screen and (max-width: 399px) {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    font-size: 11px;
+  }
 
   @media screen and (max-width: 1199px) {
     background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
@@ -138,7 +146,7 @@
 .prices-item {
   display: flex;
   justify-content: space-between;
-  white-space: nowrap;
+  // white-space: nowrap;
   align-items: baseline;
   margin-bottom: 20px;
 
@@ -150,6 +158,7 @@
 }
 
 .prices-border {
+  flex: 1;
   border-bottom: 1px solid $transparent-color;
   width: 100%;
 }
