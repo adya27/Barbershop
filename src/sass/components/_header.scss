@@ -212,12 +212,13 @@ img {
 
   list-style: none;
 }
-.navigation-item {
+.navigation-item a {
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.1em;
+  text-decoration: none;
 
   color: $primary-bg-color;
 
@@ -228,8 +229,8 @@ img {
   }
 }
 
-.navigation-item:hover,
-.navigation-item:focus {
+.navigation-item:hover a,
+.navigation-item:focus a {
   color: $accent-bg-color;
   cursor: pointer;
 }
