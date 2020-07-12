@@ -129,11 +129,11 @@
     height: 100%;
     width: 100%;
     top: 0;
-    left: calc((100% - 768px) / 2 + 120px + 39px);
+    left: calc((100% - 768px) / 2 + 160px);
   }
 
   @media screen and (min-width: $desktop) {
-    left: calc((100% - 1170px) / 2 + 120px + 40px);
+    left: calc((100% - 1170px) / 2 + 120px);
   }
 }
 img {
