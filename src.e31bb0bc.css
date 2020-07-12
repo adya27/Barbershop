@@ -295,10 +295,17 @@ link {
 .header-text {
   position: relative;
   z-index: 10;
+  max-width: 306px;
 }
 @media screen and (min-width: 768px) {
   .header-text {
     margin-left: 60px;
+    max-width: 355px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header-text {
+    max-width: 400px;
   }
 }
 
@@ -483,7 +490,11 @@ link {
 .btn-register.mobile {
   text-align: center;
   text-decoration: none;
-  width: 194px;
+}
+@media screen and (max-width: 767px) {
+  .btn-register.mobile {
+    width: 194px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
