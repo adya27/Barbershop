@@ -219,7 +219,8 @@
   color: $primary-bg-color;
 
   @media screen and (max-width: $tablet - 1px) {
-    font-size: 16px;
+    font-size: 18px;
+    line-height: 25px;
 
     color: $primary-text-color;
   }
@@ -264,8 +265,7 @@
     flex-direction: row;
   }
 }
-.contacts__item,
-.contacts__item a {
+.contacts__ref {
   font-family: 'Open Sans';
   font-weight: 600;
   font-size: 12px;
@@ -281,16 +281,16 @@
     font-size: 18px;
     line-height: 25px;
     text-align: left;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
 
     color: $primary-text-color;
   }
 }
 
-// .contacts__item .btn-register{
-
-// }
+.btn-register.mobile {
+  text-align: center;
+  text-decoration: none;
+  width: 192px;
+}
 .contacts__item:last-child {
   @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
     margin-bottom: 20px;
