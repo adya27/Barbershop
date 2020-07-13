@@ -1360,11 +1360,19 @@ link {
 }
 
 @media screen and (min-width: 1200px) {
+  .old-school .item {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
   .old-school .item:hover, .old-school .item:focus {
-    -webkit-transition: 400ms cubic-bezier(0.13, 0.77, 0.83, 0.23);
-    transition: 400ms cubic-bezier(0.13, 0.77, 0.83, 0.23);
+    -webkit-transition: 400ms cubic-bezier(0.13, 0.77, 0.83, 0.23), -webkit-transform 750ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 400ms cubic-bezier(0.13, 0.77, 0.83, 0.23), -webkit-transform 750ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 400ms cubic-bezier(0.13, 0.77, 0.83, 0.23), transform 750ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 400ms cubic-bezier(0.13, 0.77, 0.83, 0.23), transform 750ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 750ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color: #303030;
     color: white;
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
   }
 }
 
