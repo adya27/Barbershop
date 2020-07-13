@@ -74,7 +74,6 @@
 .old-school .feature {
   display: flex;
   flex-wrap: wrap;
-  position: relative;
   min-height: 331px;
 }
 .old-school .item {
@@ -89,14 +88,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  @media screen and (min-width: $tablet) {
-    max-height: 133px;
-  }
-
+  max-height: 133px;
   @media screen and (min-width: $desktop) {
     &:hover,
     &:focus {
-      transition: 400ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+      transition: $animation;
       background-color: $primary-text-color;
       color: white;
     }
@@ -107,16 +103,13 @@
   }
 
   &:nth-child(2) {
-    position: absolute;
-    top: 35px;
-    right: 0;
+    margin-top: 35px;
+  }
+  &:nth-child(3) {
+    margin-top: -35px;
   }
 
   &:nth-child(4) {
-    padding: 0px 31px;
-    position: absolute;
-    top: 198px;
-    right: 0;
     margin-bottom: 0;
   }
   @media screen and (min-width: $tablet) {
