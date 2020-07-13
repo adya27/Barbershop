@@ -24,6 +24,10 @@
   text-transform: none;
 
   color: $primary-bg-color;
+
+  @media screen and (min-width: $tablet) {
+    text-align: left;
+  }
 }
 
 // секция имя и телефон
