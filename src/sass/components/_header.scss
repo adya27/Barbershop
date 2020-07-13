@@ -52,6 +52,9 @@
   @media screen and (min-width: $tablet) {
     margin-bottom: 192px;
   }
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+    align-items: flex-start;
+  }
 }
 .header-menu.is-open {
   display: block;
@@ -61,8 +64,9 @@
   background-color: $primary-bg-color;
   z-index: 12;
   width: 337px;
-  height: 100%;
+  height: 100vh;
   padding-top: 118px;
+  padding-bottom: 80px;
   padding-left: 40px;
   overflow-y: scroll;
 }
@@ -100,6 +104,7 @@
 }
 
 .header-title {
+  max-width: 500px;
   position: relative;
   z-index: 10;
   margin-bottom: 20px;
@@ -142,6 +147,117 @@
   @media screen and (min-width: $desktop) {
     left: calc((100% - 1170px) / 2 + 120px);
   }
+}
+
+.prev,
+.next,
+.btn0,
+.btn1,
+.btn2 {
+  font-family: 'Open Sans';
+  font-style: 400;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+
+  text-align: right;
+  letter-spacing: 0.1em;
+
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+}
+.prev:hover,
+.prev:focus,
+.next:hover,
+.next:focus,
+.btn0:hover,
+.btn0:focus,
+.btn1:hover,
+.btn1:focus,
+.btn2:hover,
+.btn2:focus {
+  outline: none;
+}
+.btnS0,
+.btnS1 {
+  display: block;
+
+  height: 2px;
+  background-color: #ffffff;
+}
+.btnS0 {
+  width: 18px;
+}
+.btnS1 {
+  width: 8px;
+}
+
+.prev {
+  position: absolute;
+  left: 424px;
+  bottom: 40px;
+  @media screen and (min-width: $desktop) {
+    left: 924px;
+  }
+}
+.prev::after {
+  position: relative;
+  left: 20px;
+  display: block;
+  content: ' ';
+  width: 60px;
+  height: 1px;
+  background-color: #ffffff;
+  margin-top: 8px;
+}
+
+.next {
+  position: absolute;
+  left: 523px;
+  bottom: 40px;
+  @media screen and (min-width: $desktop) {
+    left: 1023px;
+  }
+}
+.next::after {
+  position: relative;
+  display: block;
+  content: ' ';
+  width: 60px;
+  height: 1px;
+  background-color: #ffffff;
+  margin-top: 8px;
+}
+
+.btn0 {
+  position: absolute;
+  left: 552px;
+
+  padding: 0;
+  @media screen and (min-width: $desktop) {
+    left: 1052px;
+  }
+}
+.btn1,
+.btn2 {
+  position: absolute;
+  left: 562px;
+
+  padding: 0;
+  @media screen and (min-width: $desktop) {
+    left: 1062px;
+  }
+}
+
+.btn0 {
+  bottom: 353px;
+}
+.btn1 {
+  bottom: 339px;
+}
+.btn2 {
+  bottom: 325px;
 }
 
 .header-svg {
@@ -216,12 +332,17 @@
   list-style: none;
 }
 .navigation-item a {
+  display: block;
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.1em;
   text-decoration: none;
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
 
   color: $primary-bg-color;
 
