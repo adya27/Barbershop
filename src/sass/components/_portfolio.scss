@@ -38,7 +38,7 @@
         margin-right: 30px;
       
         // width: calc(100%-2*15px)/2;
-        flex-basis: calc((100% - 30px * 2) / 2);
+        flex-basis: calc((100% - 16px * 2) / 2);
         &:nth-child(2n){
             margin-right: 0px;
         }
@@ -47,7 +47,7 @@
         }
       }
       @media screen and (min-width: $desktop) {
-        flex-basis: calc((100% - 30px * 4) / 4);
+        flex-basis: calc((100% - 23px * 4) / 4);
         
         &:not(:last-child){
         margin-right: 30px;
