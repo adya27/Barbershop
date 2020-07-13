@@ -279,21 +279,40 @@ html {
 }
 
 .header-subtitle {
+  display: flex;
+  max-width: 400px;
   position: relative;
   z-index: 10;
+  margin-left: 31px;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
   .header-subtitle {
     margin-bottom: 20px;
-    margin-left: 60px;
+    margin-left: 120px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header-subtitle {
+    margin-left: 100px;
   }
 }
 
+.header-subtitle:before {
+  display: block;
+  margin-right: 20px;
+  transform: translateY(6px);
+  content: " ";
+  width: 60px;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.6);
+}
+
 .header-title {
-  max-width: 500px;
+  max-width: 400px;
   position: relative;
   z-index: 10;
+  margin-left: 31px;
   margin-bottom: 20px;
 }
 @media screen and (max-width: 479px) {
@@ -304,7 +323,12 @@ html {
 @media screen and (min-width: 768px) {
   .header-title {
     margin-bottom: 20px;
-    margin-left: 60px;
+    margin-left: 120px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header-title {
+    margin-left: 100px;
   }
 }
 
@@ -312,16 +336,18 @@ html {
   position: relative;
   z-index: 10;
   max-width: 306px;
+  margin-left: 31px;
 }
 @media screen and (min-width: 768px) {
   .header-text {
-    margin-left: 60px;
+    margin-left: 120px;
     max-width: 355px;
   }
 }
 @media screen and (min-width: 1200px) {
   .header-text {
     max-width: 400px;
+    margin-left: 100px;
   }
 }
 
