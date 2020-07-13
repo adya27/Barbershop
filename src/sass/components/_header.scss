@@ -104,6 +104,9 @@
 }
 
 .header-title {
+  @media screen and (max-width: $mobile - 1px) {
+    font-size: 40px;
+  }
   max-width: 500px;
   position: relative;
   z-index: 10;
@@ -163,6 +166,8 @@
   text-align: right;
   letter-spacing: 0.1em;
 
+  cursor: pointer;
+
   color: #ffffff;
   background-color: transparent;
   border: none;
@@ -198,7 +203,7 @@
   left: 424px;
   bottom: 40px;
   @media screen and (min-width: $desktop) {
-    left: 924px;
+    left: 874px;
   }
 }
 .prev::after {
@@ -217,7 +222,7 @@
   left: 523px;
   bottom: 40px;
   @media screen and (min-width: $desktop) {
-    left: 1023px;
+    left: 973px;
   }
 }
 .next::after {
@@ -236,7 +241,7 @@
 
   padding: 0;
   @media screen and (min-width: $desktop) {
-    left: 1052px;
+    left: 1002px;
   }
 }
 .btn1,
@@ -246,7 +251,7 @@
 
   padding: 0;
   @media screen and (min-width: $desktop) {
-    left: 1062px;
+    left: 1012px;
   }
 }
 
