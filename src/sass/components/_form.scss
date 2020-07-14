@@ -56,11 +56,13 @@
   }
 
   &:focus-within .form-text {
-    color: #ffffff;
+    color: $primary-bg-color;
+    transition: $animation;
   }
 
   &:focus-within {
     border-bottom: 1px solid $primary-bg-color;
+    transition: $animation;
   }
 }
 @media screen and (min-width: $tablet) {
@@ -98,10 +100,12 @@
 
   &:focus-within .message-text {
     color: $primary-bg-color;
+    transition: $animation;
   }
 
   &:focus-within {
     border-bottom: 1px solid $primary-bg-color;
+    transition: $animation;
   }
 }
 
