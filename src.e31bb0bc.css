@@ -152,6 +152,7 @@ html {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: #ffffff;
+  transition: 400ms cubic-bezier(0.13, 0.77, 0.83, 0.23);
   animation-duration: 750ms;
   animation-timing-function: ease;
 }
@@ -182,13 +183,17 @@ html {
   }
 }
 .header {
-  position: relative;
   margin-left: auto;
   width: 100%;
   background-color: #ffffff;
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    position: relative;
+    overflow: hidden;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -242,14 +247,22 @@ html {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #ffffff;
   z-index: 12;
   width: 337px;
   height: 100vh;
   padding-top: 118px;
   padding-bottom: 80px;
   padding-left: 40px;
-  overflow-y: scroll;
+  background-color: #ffffff;
+}
+
+.header-modal.is-open {
+  position: fixed;
+  z-index: 11;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(25, 28, 38, 0.2);
 }
 
 .header-menu.is-open .btn-register {
@@ -1164,6 +1177,7 @@ html {
   height: 44px;
   color: #303030;
   background-color: #ffffff;
+  transition: color 400ms cubic-bezier(0.13, 0.77, 0.83, 0.23);
 }
 .icon-link:hover, .icon-link:focus {
   color: #ff6c00;
@@ -1371,14 +1385,17 @@ html {
   background-color: #191c26;
   background-image: url(/footer-mob-x1.9d0c5d58.png);
   background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 100%;
 }
 @media screen and (min-width: 768px) {
   .footer-contacts {
     padding-top: 100px;
     padding-bottom: 100px;
-    max-width: 768px;
+    max-width: 100%;
     background-image: url(/footer-tab-x1.44e1977c.png);
     background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
   }
 }
@@ -1391,6 +1408,7 @@ html {
     flex-direction: column;
     width: 625px;
     background-size: cover;
+    background-repeat: no-repeat;
     width: 48%;
   }
 }
@@ -1429,11 +1447,16 @@ html {
   padding-bottom: 40px;
   text-transform: capitalize;
   text-align: center;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 42px;
   line-height: 1.16;
   letter-spacing: 0.05em;
   color: #ffffff;
+}
+@media screen and (min-width: 768px) {
+  .footer-header {
+    text-align: left;
+  }
 }
 
 .address-info {
@@ -1504,8 +1527,8 @@ html {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .working-container {
-    margin-top: 16%;
     margin-left: 150px;
+    margin-top: 90px;
   }
 }
 
@@ -1559,6 +1582,7 @@ html {
 .footer-items a:hover, .footer-items a:focus {
   color: #ff6c00;
   cursor: pointer;
+  transition: 400ms cubic-bezier(0.13, 0.77, 0.83, 0.23);
 }
 
 .item-soc {
@@ -1647,13 +1671,18 @@ html {
 .form-caption {
   margin-bottom: 44px;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 42px;
   line-height: 1.16;
   letter-spacing: 0.05em;
   text-align: center;
   text-transform: none;
   color: #ffffff;
+}
+@media screen and (min-width: 768px) {
+  .form-caption {
+    text-align: left;
+  }
 }
 
 .form-section {
