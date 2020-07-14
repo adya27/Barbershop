@@ -18,7 +18,7 @@
         rgba(25, 28, 38, 0.2),
         rgba(25, 28, 38, 0.2)
       ),
-      url('../images/header/SliderMob1.jpg');
+      url('../images/header/SliderMob3.jpg');
     background-color: rgba(47, 48, 58, 0.8);
 
     @media screen and (min-device-pixel-ratio: 2),
@@ -28,7 +28,7 @@
           rgba(25, 28, 38, 0.2),
           rgba(25, 28, 38, 0.2)
         ),
-        url('../images/header/SliderMob1@2x.jpg');
+        url('../images/header/SliderMob3@2x.jpg');
     }
   }
 }
@@ -190,6 +190,22 @@
     left: calc((100% - 1170px) / 2 + 120px);
   }
 }
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background: rgba(25, 28, 38, 0.2);
+
+  height: 100%;
+  pointer-events: none;
+  @media screen and (min-width: $tablet) {
+    width: 609px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 1125px;
+  }
+}
 
 .prev,
 .next,
@@ -207,9 +223,10 @@
 
   cursor: pointer;
 
-  color: #ffffff;
+  color: rgba(157, 164, 189, 0.6);
   background-color: transparent;
   border: none;
+  transition: $animation;
 }
 .prev:hover,
 .prev:focus,
@@ -221,6 +238,7 @@
 .btn1:focus,
 .btn2:hover,
 .btn2:focus {
+  color: #ffffff;
   outline: none;
 }
 .btnS0,
@@ -228,7 +246,13 @@
   display: block;
 
   height: 2px;
-  background-color: #ffffff;
+  background-color: rgba(157, 164, 189, 0.6);
+  transition: $animation;
+
+  &:hover,
+  &:focus {
+    background-color: #ffffff;
+  }
 }
 .btnS0 {
   width: 18px;
@@ -252,7 +276,9 @@
   content: ' ';
   width: 60px;
   height: 1px;
-  background-color: #ffffff;
+  background-color: rgba(157, 164, 189, 0.6);
+  transition: $animation;
+
   margin-top: 8px;
 }
 
@@ -270,8 +296,17 @@
   content: ' ';
   width: 60px;
   height: 1px;
-  background-color: #ffffff;
+
   margin-top: 8px;
+
+  background-color: rgba(157, 164, 189, 0.6);
+  transition: $animation;
+}
+.prev:hover.prev::after,
+.prev:focus.prev::after,
+.next:hover.next::after,
+.next:focus.next::after {
+  background-color: #ffffff;
 }
 
 .btn0 {
@@ -306,6 +341,7 @@
 
 .header-svg {
   fill: $primary-bg-color;
+  transition: $animation;
 
   @media screen and (min-width: $tablet) {
     fill: $primary-text-color;
@@ -377,12 +413,16 @@
 }
 .navigation-item a {
   display: block;
+
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.1em;
   text-decoration: none;
+
+  transition: $animation;
+
   @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
     padding-top: 12px;
     padding-bottom: 12px;
@@ -448,6 +488,7 @@
   text-decoration: none;
 
   color: $primary-bg-color;
+  transition: $animation;
 
   @media screen and (max-width: $tablet - 1px) {
     font-size: 18px;
@@ -542,6 +583,7 @@
   letter-spacing: 0.2em;
 
   color: $primary-text-color;
+  transition: $animation;
 }
 .how-we-work {
   position: relative;
