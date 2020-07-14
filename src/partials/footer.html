@@ -12,7 +12,14 @@
 
           <label class="form-label">
             <span class="form-text">Телефон*</span>
-            <input type="tel" name="phone" placeholder=" " class="form-field" />
+            <input
+              type="tel"
+              name="phone"
+              placeholder=" "
+              pattern="^\d{10}$"
+              title="номер телефона 0661111111"
+              class="form-field"
+            />
           </label>
 
           <label class="message">
@@ -26,7 +33,7 @@
           </label>
         </div>
         <div class="button-send">
-          <button type="button" class="btn-register">Отправить</button>
+          <button type="submit" class="btn-register">Отправить</button>
         </div>
       </form>
     </div>
