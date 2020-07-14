@@ -118,7 +118,11 @@
               </a>
             </li>
             <li class="contacts__item">
-              <a href="#footer-anchor" data-open-modal class="btn-register">
+              <a
+                href="#footer-anchor"
+                data-open-modal
+                class="btn-register mobile"
+              >
                 онлайн-запись
               </a>
             </li>
@@ -243,6 +247,13 @@
         </picture>
       </div>
     </div>
+
+    <button class="btn0"><span class="btnS0"></span></button>
+    <button class="btn1"><span class="btnS1"></span></button>
+    <button class="btn2"><span class="btnS1"></span></button>
+
+    <button class="prev">Назад</button>
+    <button class="next">Вперед</button>
 
     <script>
       !(function (e, t) {
@@ -1000,7 +1011,31 @@
     </script>
 
     <script>
-      new Siema();
+      const mySiema = new Siema();
+
+      const prev = document.querySelector('.prev');
+      const next = document.querySelector('.next');
+
+      prev.addEventListener('click', () => mySiema.prev());
+      next.addEventListener('click', () => mySiema.next());
+
+      const btn0 = document.querySelector('.btn0');
+      const btn1 = document.querySelector('.btn1');
+      const btn2 = document.querySelector('.btn2');
+      // const btn3 = document.querySelector('.btn3');
+
+      btn0.addEventListener('click', () =>
+        mySiema.goTo(0, () => console.log('Scrolled to slide with index 0')),
+      );
+      btn1.addEventListener('click', () =>
+        mySiema.goTo(1, () => console.log('Scrolled to slide with index 1')),
+      );
+      btn2.addEventListener('click', () =>
+        mySiema.goTo(2, () => console.log('Scrolled to slide with index 2')),
+      );
+      // btn3.addEventListener('click', () =>
+      //   mySiema.goTo(3, () => console.log('Scrolled to slide with index 3')),
+      // );
     </script>
   </div>
 
