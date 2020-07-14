@@ -19,15 +19,27 @@
   background-color: #191c26;
   background-image: url(../images/footer/footer-mob-x1.png);
 
+
+  // background-size: contain;
   background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  
+  // @media screen and (min-width: $mobile) and (max-width: 767px){
+  //   background-size: cover;
+  //   max-width: 100%;
+  // }
+  
 
   @media screen and (min-width: $tablet) {
     padding-top: 100px;
     padding-bottom: 100px;
-    max-width: 768px;
+    // max-width: 768px;
+    max-width: 100%;
     background-image: url(../images/footer/footer-tab-x1.png);
 
     background-size: cover;
+    background-repeat: no-repeat;
 
     display: flex;
   }
@@ -43,6 +55,7 @@
     width: 625px;
 
     background-size: cover;
+    background-repeat: no-repeat;
     width: 48%;
     
   }
@@ -110,13 +123,17 @@
 
   text-transform: capitalize;
   text-align: center;
-  font-weight: bold;
+  font-weight: 600;
 
   font-size: 42px;
   line-height: 1.16;
   letter-spacing: 0.05em;
 
   color: $primary-bg-color;
+
+  @media screen and (min-width: $tablet) {
+    text-align: left;
+  }
 }
 
 .address-info {
@@ -187,8 +204,10 @@
 
 .working-container {
   @media screen and (min-width: $tablet) and (max-width: 1199px) {
-    margin-top: 16%;
+    // margin-top: 16%;
     margin-left: 150px;
+
+    margin-top: 90px;
   }
 }
 
@@ -248,6 +267,7 @@
   & a:focus{
     color: $accent-bg-color;
     cursor: pointer;
+    transition: $animation;
   }
 }
 
