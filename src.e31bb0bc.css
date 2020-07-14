@@ -151,6 +151,7 @@ html {
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+  text-decoration: none;
   color: #ffffff;
   transition: 400ms cubic-bezier(0.13, 0.77, 0.83, 0.23);
   animation-duration: 750ms;
@@ -198,13 +199,13 @@ html {
 
 @media screen and (max-width: 767px) {
   .header {
-    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url("/SliderMob1.0cc1092e.jpg");
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url("/SliderMob3.6d1f0ba5.jpg");
     background-color: rgba(47, 48, 58, 0.8);
   }
 }
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
   .header {
-    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url("/SliderMob1@2x.6abf94ad.jpg");
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url("/SliderMob3@2x.a167cb8d.jpg");
   }
 }
 
@@ -388,6 +389,26 @@ html {
   }
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background: rgba(25, 28, 38, 0.2);
+  height: 100%;
+  pointer-events: none;
+}
+@media screen and (min-width: 768px) {
+  .overlay {
+    width: 609px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .overlay {
+    width: 1125px;
+  }
+}
+
 .prev,
 .next,
 .btn0,
@@ -401,9 +422,10 @@ html {
   text-align: right;
   letter-spacing: 0.1em;
   cursor: pointer;
-  color: #ffffff;
+  color: rgba(157, 164, 189, 0.6);
   background-color: transparent;
   border: none;
+  transition: 400ms cubic-bezier(0.13, 0.77, 0.83, 0.23);
 }
 
 .prev:hover,
@@ -416,6 +438,7 @@ html {
 .btn1:focus,
 .btn2:hover,
 .btn2:focus {
+  color: #ffffff;
   outline: none;
 }
 
@@ -423,6 +446,12 @@ html {
 .btnS1 {
   display: block;
   height: 2px;
+  background-color: rgba(157, 164, 189, 0.6);
+  transition: 400ms cubic-bezier(0.13, 0.77, 0.83, 0.23);
+}
+.btnS0:hover, .btnS0:focus,
+.btnS1:hover,
+.btnS1:focus {
   background-color: #ffffff;
 }
 
@@ -452,7 +481,8 @@ html {
   content: " ";
   width: 60px;
   height: 1px;
-  background-color: #ffffff;
+  background-color: rgba(157, 164, 189, 0.6);
+  transition: 400ms cubic-bezier(0.13, 0.77, 0.83, 0.23);
   margin-top: 8px;
 }
 
@@ -473,8 +503,16 @@ html {
   content: " ";
   width: 60px;
   height: 1px;
-  background-color: #ffffff;
   margin-top: 8px;
+  background-color: rgba(157, 164, 189, 0.6);
+  transition: 400ms cubic-bezier(0.13, 0.77, 0.83, 0.23);
+}
+
+.prev:hover.prev::after,
+.prev:focus.prev::after,
+.next:hover.next::after,
+.next:focus.next::after {
+  background-color: #ffffff;
 }
 
 .btn0 {
@@ -515,6 +553,7 @@ html {
 
 .header-svg {
   fill: #ffffff;
+  transition: 400ms cubic-bezier(0.13, 0.77, 0.83, 0.23);
 }
 @media screen and (min-width: 768px) {
   .header-svg {
@@ -589,6 +628,7 @@ html {
   line-height: 16px;
   letter-spacing: 0.1em;
   text-decoration: none;
+  transition: 400ms cubic-bezier(0.13, 0.77, 0.83, 0.23);
   color: #ffffff;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -664,6 +704,7 @@ html {
   text-transform: uppercase;
   text-decoration: none;
   color: #ffffff;
+  transition: 400ms cubic-bezier(0.13, 0.77, 0.83, 0.23);
 }
 @media screen and (max-width: 767px) {
   .contacts__ref {
@@ -768,6 +809,7 @@ html {
   line-height: 19px;
   letter-spacing: 0.2em;
   color: #303030;
+  transition: 400ms cubic-bezier(0.13, 0.77, 0.83, 0.23);
 }
 
 .how-we-work {
@@ -1066,9 +1108,8 @@ html {
   width: 100%;
 }
 
-.prices-btn {
-  display: flex;
-  margin: auto;
+.prices-button-box {
+  text-align: center;
 }
 
 .team {
@@ -1714,9 +1755,11 @@ html {
 }
 .form-label:focus-within .form-text {
   color: #ffffff;
+  transition: 400ms cubic-bezier(0.13, 0.77, 0.83, 0.23);
 }
 .form-label:focus-within {
   border-bottom: 1px solid #ffffff;
+  transition: 400ms cubic-bezier(0.13, 0.77, 0.83, 0.23);
 }
 
 @media screen and (min-width: 768px) {
@@ -1749,9 +1792,11 @@ html {
 }
 .message:focus-within .message-text {
   color: #ffffff;
+  transition: 400ms cubic-bezier(0.13, 0.77, 0.83, 0.23);
 }
 .message:focus-within {
   border-bottom: 1px solid #ffffff;
+  transition: 400ms cubic-bezier(0.13, 0.77, 0.83, 0.23);
 }
 
 .message-field {
