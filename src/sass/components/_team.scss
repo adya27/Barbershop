@@ -113,7 +113,7 @@
   color: $primary-text-color;
   background-color: $primary-bg-color;
 
-  //   transition: color;??????????????
+  transition: color $animation;
 
   &:hover,
   &:focus {
